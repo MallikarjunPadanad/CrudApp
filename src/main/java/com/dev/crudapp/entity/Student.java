@@ -1,20 +1,23 @@
 package com.dev.crudapp.entity;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "students")
 public class Student {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private int age;
     private int rollNo;
     private String subject;
     private String email;
 
+    public Student() {
+    }
 
     public Long getId() {
         return id;
