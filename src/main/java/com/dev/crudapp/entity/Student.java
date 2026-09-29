@@ -15,6 +15,15 @@ public class Student {
     private int rollNo;
     private String subject;
     private String email;
+    private Boolean deleted;
+
+    public Boolean getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
+    }
 
     public Student() {
     }
